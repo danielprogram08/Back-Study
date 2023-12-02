@@ -1,0 +1,68 @@
+create database Avon;
+
+use Avon;
+
+CREATE TABLE vendedores (
+	id_vendedor INT IDENTITY PRIMARY KEY,
+	nome_vendedor varchar(100)
+);
+
+CREATE TABLE vendas (
+	id_venda INT IDENTITY PRIMARY KEY,
+	data_venda DATETIME,
+	valor_venda DECIMAL(6,2),
+	comissao INT,
+	id_vendedor INT,
+	FOREIGN KEY (id_vendedor) REFERENCES vendedores (id_vendedor),
+);
+
+
+INSERT INTO vendedores (nome_vendedor) values
+('Joel'),
+('Jane'),
+('Andrew'),
+('Marcelo'),
+('Tiago'),
+('Moisés');
+
+select * from vendedores;
+
+insert into vendas (data_venda, valor_venda, comissao, id_vendedor) values
+(GETDATE(), 5321.56, 20, 1),
+(GETDATE(), 200.33, 15, 1),
+(GETDATE(), 3000, 18, 2),
+(GETDATE(), 4000, 19, 6);
+
+select * from vendas;
+
+--INNER JOIN (Juntar informações em comum e existente entre uma ou mais tabelas)
+select vendedores.id_vendedor, 
+	vendedores.nome_vendedor, 
+	valor_venda, 
+	comissao
+from vendas 
+	inner join vendedores on vendas.id_vendedor = vendedores.id_vendedor
+order by
+	vendas.valor_venda desc;
+
+--LEFT JOIN
+select vendedores.id_vendedor, 
+	vendedores.nome_vendedor, 
+	valor_venda, 
+	comissao,
+	((vendas.valor_venda/100)*vendas.comissao)
+from vendas 
+	left join vendedores on vendas.id_vendedor = vendedores.id_vendedor
+order by
+	vendas.valor_venda desc;
+
+--RIGHT JOIN	
+select vendedores.id_vendedor, 
+	vendedores.nome_vendedor, 
+	valor_venda, 
+	comissao,
+	((vendas.valor_venda/100)*vendas.comissao)
+from vendas 
+	right join vendedores on vendas.id_vendedor = vendedores.id_vendedor
+order by
+	vendas.valor_venda desc;
