@@ -16,7 +16,7 @@ public class Exer48 {
         Scanner in = new Scanner(System.in);
         int nascidas = 0, meses, countM = 0, crmasculina = 0, crfeminina = 0, crMortas;
         char sexo, resp = 's';
-
+        
         while (resp == 's' || (crmasculina + crfeminina) <= nascidas) {
             System.out.println("Informe o número de crianças nascidas no período: ");
                 nascidas = in.nextInt();   
@@ -40,9 +40,10 @@ public class Exer48 {
                         break;
                     }                       
         }
-
+        
+        System.out.println("O número de nascidos no período: " + nascidas);
         System.out.println("O número de crianças mortas no período: " + (crMortas = crmasculina + crfeminina));
-        System.out.println("O número de crianças do sexo masculino mortas no período: ");
-        System.out.println("O número de crianças que viveram 24 meses ou menos no período: ");
+        System.out.println("O número de crianças do sexo masculino mortas no período: " + crmasculina);
+        System.out.println("O número de crianças que viveram 24 meses ou menos no período: " + countM);
     }
 }
