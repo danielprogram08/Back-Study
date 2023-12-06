@@ -26,6 +26,9 @@ public class Exer48 {
                         crmasculina++;
                     } else if (sexo == 'f') {
                         crfeminina++; 
+                    } else if (sexo != 'm' && sexo != 'f') {
+                        System.out.println("Dado inválido. Tente novamente!");
+                            break;
                     }
 
             System.out.println("Informe o número de meses de vida da criança: ");
@@ -42,8 +45,8 @@ public class Exer48 {
         }
         
         System.out.println("O número de nascidos no período: " + nascidas);
-        System.out.println("O número de crianças mortas no período: " + (crMortas = crmasculina + crfeminina));
-        System.out.println("O número de crianças do sexo masculino mortas no período: " + crmasculina);
-        System.out.println("O número de crianças que viveram 24 meses ou menos no período: " + countM);
+        System.out.println("Porcentagem de crianças mortas no período: " + ((crMortas = crmasculina + crfeminina) * 100) / nascidas + "%");
+        System.out.println("Porcentagem de crianças do sexo masculino mortas no período: " + (crmasculina * 100) / nascidas + "%");
+        System.out.println("Porcentagem de crianças que viveram 24 meses ou menos no período: " + (countM * 100) / nascidas + "%");
     }
 }
