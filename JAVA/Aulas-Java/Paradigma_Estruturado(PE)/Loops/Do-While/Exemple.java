@@ -19,7 +19,7 @@ public class Exemple {
         //Do-While;
         do {
             count++;
-            System.out.println("valor de i: " + i);
+            System.out.println("valor de i: " + count);
         } while (count < 15); 
 
         System.out.println(count);
