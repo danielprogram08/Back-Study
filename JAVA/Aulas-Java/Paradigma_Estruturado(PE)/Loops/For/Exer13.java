@@ -5,13 +5,16 @@ public class Exer13 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        int num, i;
-        double raiz;
+        int valor, raiz, mul;
 
-        System.out.println("Insira um valor: ");
-        num = in.nextInt();
-        raiz = Math.sqrt(num);
+        for (int i = 1; i <= 15; i++) {
+            System.out.print("Insira uma raiz: ");
+                valor = in.nextInt();
+            
+            raiz = (valor * valor);
 
-        System.out.println("Sua raiz é: " + raiz);
+            System.out.println("Elemento da raiz inserida: " + raiz);
+
+        }
     }
 }
