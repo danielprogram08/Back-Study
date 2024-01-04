@@ -28,5 +28,10 @@ public class Exemple {
         diasSemana[6] = "Sábado";
 
         System.out.println(diasSemana[0]);
+
+        //Mais resumido;
+        String[] diassemana = {"Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"};
+
+        System.out.println(diassemana[0]);
     }
 }
