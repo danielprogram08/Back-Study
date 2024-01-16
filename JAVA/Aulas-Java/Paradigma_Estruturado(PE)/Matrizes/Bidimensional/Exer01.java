@@ -26,11 +26,9 @@ public class Exer01 {
                 //System.out.println("posição: " + posicao + " valor: " + valor);
 
                 if (posicao == 0) {
-                    FirstPosition = posicao;
-                    valorR = valor;
+                    System.out.println("Valor: " + valor);
                 }
-
-                System.out.println("posição: " + FirstPosition + " valor: " + valorR);
+                
             }
         }
     }
