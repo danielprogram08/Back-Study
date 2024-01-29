@@ -10,24 +10,23 @@ public class Exer04 {
             String nome = in.nextLine();
                 System.out.println();
 
-        System.out.println(nome + " insira o número de registros que deseja cadastrar: ");
-            int registros = in.nextInt();
+        System.out.println("Insira a quantidade de registros que deseja cadastrar: ");
+            int registro = in.nextInt();
 
-        String[][] agenda = new String[registros][];
+        String[][] agenda = new String[registro][0];
 
         for (int i = 0; i < agenda.length; i++) {
-            System.out.println(nome + " insira um dia: ");
-                int dia = in.nextInt();
+            System.out.println("Insira um mês [ex: jan - 1, fev - 2]: ");
+                int mes = in.nextInt();
             
-            agenda[i] = new String[dia];
+            System.out.println("registro (Mês): " + i + " mês: " + mes);
 
             for (int j = 0; j < agenda[i].length; j++) {
-                System.out.println(nome + " insira um mês: [ex: jan = 1, fev = 2]");
-                    int mes = in.nextInt();
+                System.out.println("Insira um dia: ");
+                    int dia = in.nextInt();
 
-                agenda[j] = new String[mes];
+                System.out.println("registro(mês): " + i + " mês: " + mes + " registro(dia): " + j + " dia: " + dia);
             }
         }
-
     }
 }
