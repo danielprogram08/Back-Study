@@ -5,67 +5,28 @@ import java.util.Scanner;
 public class Exer04 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in); 
-        String nome,mes,resp;
 
         System.out.println("Bem-Vindo! Digite seu nome: ");
-            nome = in.nextLine();
+            String nome = in.nextLine();
                 System.out.println();
-        
-        System.out.println(nome + " selecione um mês válido relacionado ao 1 semestre [Janeiro - Julho]: ");
-            mes = in.nextLine();
 
-        switch (mes) {
-            case "janeiro":
-                System.out.println("mês selecionado: " + mes);
-                    int[] jan = new int[31];
-                    int dia,dia2;
+        System.out.println(nome + " insira o número de registros que deseja cadastrar: ");
+            int registros = in.nextInt();
 
-                    System.out.println(nome + " insira um dia válido: ");
-                        dia = in.nextInt();
-                        jan[0] = dia;
+        String[][] agenda = new String[registros][];
 
-                    System.out.println(nome + " deseja adicionar mais algum outro dia ? ");
-                        resp = in.nextLine();
-                            if (resp == "não") {
-                                break;
-                            }
-
-                    System.out.println(" insira outro dia válido: ");
-                        dia2 = in.nextInt();
-                        jan[1] = dia2;
+        for (int i = 0; i < agenda.length; i++) {
+            System.out.println(nome + " insira um dia: ");
+                int dia = in.nextInt();
             
-            case "fevereiro":
-                System.out.println("mês selecionado: " + mes);
-                    int[] fev = new int[29];
-                        break;
+            agenda[i] = new String[dia];
 
-            case "março":
-                System.out.println("mês selecionado: " + mes);
-                    int[] mar = new int[31];
-                        break;
-            
-            case "abril":
-                System.out.println("mês selecionado: " + mes);
-                    int[] abr = new int[30];
-                        break;
+            for (int j = 0; j < agenda[i].length; j++) {
+                System.out.println(nome + " insira um mês: [ex: jan = 1, fev = 2]");
+                    int mes = in.nextInt();
 
-            case "maio":
-                System.out.println("mês selecionado: " + mes);
-                    int[] mai = new int[31];
-                        break;
-
-            case "junho":
-                System.out.println("mês selecionado: " + mes);
-                    int[] jun = new int[30];
-                        break;
-
-            case "julho":
-                System.out.println("mês selecionado: " + mes);
-                    int[] jul = new int[31];
-                        break;
-
-            default:
-                System.out.println("Mês inválido! Tente novamente!");
+                agenda[j] = new String[mes];
+            }
         }
 
     }
