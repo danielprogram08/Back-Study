@@ -10,23 +10,55 @@ public class Exer04 {
             String nome = in.nextLine();
                 System.out.println();
 
-        System.out.println("Insira a quantidade de registros que deseja cadastrar: ");
+        System.out.println("ATENÇÃO! Ao inserir a quantidade de registros, você irá cadastrar o número de dias de acordo com a quantidade de registros.");
+            System.out.println();
+
+        System.out.println(nome + " insira a quantidade de registros que deseja cadastrar: ");
             int registro = in.nextInt();
 
-        String[][] agenda = new String[registro][0];
+        String[][] agenda = new String[registro][];
+
+        String mes = "",atividade = "";
+        int dia = 0, hora = 0, linha = 0, coluna = 0;
 
         for (int i = 0; i < agenda.length; i++) {
-            System.out.println("Insira um mês [ex: jan - 1, fev - 2]: ");
-                int mes = in.nextInt();
-            
-            System.out.println("registro (Mês): " + i + " mês: " + mes);
-
+            System.out.println();
+            System.out.println(nome + " insira um mês: ");
+            mes = in.next();
+            System.out.println();
+        
+            agenda[i] = new String[registro]; //Inicializa o subarray com o número de dias;
+        
             for (int j = 0; j < agenda[i].length; j++) {
-                System.out.println("Insira um dia: ");
-                    int dia = in.nextInt();
+                System.out.println();
+                System.out.println(nome + " insira um dia: ");
+                dia = in.nextInt();
+                System.out.println();
+        
+                System.out.println(nome + " insira uma hora: ");
+                hora = in.nextInt();
+                System.out.println();
+        
+                if (hora > 24) {
+                    System.out.println("Hora inválida. Tente novamente!");
+                    j--; //Volta uma iteração para tentar novamente;
+                } else {
+                    System.out.println(nome + " adicione um compromisso ou insira uma informação: ");
+                    atividade = in.next();
+                    System.out.println();
+        
+                    // Convertendo inteiro para String;
+                    agenda[i][j] = Integer.toString(hora);
 
-                System.out.println("registro(mês): " + i + " mês: " + mes + " registro(dia): " + j + " dia: " + dia);
+                    linha = j;  
+                    coluna = i;
+                }
             }
-        }
+
+            System.out.println("Registro (Mês): " + i + " Mês: " + mes);
+            System.out.println("Registro (Dia): " + dia);
+            System.out.println("Atividade/Compromisso: " + atividade);
+            System.out.println("Hora: " + agenda[coluna][linha] + "h");
+        }            
     }
 }
