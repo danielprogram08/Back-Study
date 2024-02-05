@@ -1,5 +1,3 @@
-package Vetores.Arrays;
-
 import java.util.Scanner;
 
 public class Exer19 {
