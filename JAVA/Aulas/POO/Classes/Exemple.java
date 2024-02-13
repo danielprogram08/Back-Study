@@ -1,7 +1,7 @@
-package JAVA.POO.Classes;
+package JAVA.Aulas.POO.Classes;
 
 public class Exemple {
     public static void main(String[] args) {
-        
+        System.out.println("Hello World");
     }
 }

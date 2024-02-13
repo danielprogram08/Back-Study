@@ -1,5 +1,3 @@
-package Loops.ForEach;
-
 import java.util.Random;
 
 public class Exemple {
