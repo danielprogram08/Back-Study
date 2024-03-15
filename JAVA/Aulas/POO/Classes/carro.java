@@ -1,8 +1,5 @@
-package JAVA.Aulas.POO.Classes;
-
 //Objeto;
-
-public class carro {   
+class carro {   
     String marca;
     String modelo;
     int npassageiro;
