@@ -9,5 +9,5 @@ _**Mapa completo abaixo:**_
 
 _**Mapa 2 abaixo:**_
 
-![1_20240317_130007_0000.png](https://github.com/danielprogram08/Back-Study/assets/115734771/e4dee31c-fc24-4c62-8100-9083bfaffd05)
+![Mapa2](https://github.com/danielprogram08/Back-Study/assets/115734771/e4dee31c-fc24-4c62-8100-9083bfaffd05)
 
