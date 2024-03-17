@@ -9,5 +9,5 @@ _**Mapa completo abaixo:**_
 
 _**Mapa 2 abaixo:**_
 
-![Mapa2](https://files.fm/u/9ghc3zbyta)
+![Mapa2](https://ibb.co/FgnGdgF)
 
