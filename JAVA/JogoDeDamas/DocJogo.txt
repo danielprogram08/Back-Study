@@ -1,0 +1,26 @@
+Damas;
+
+--PLayers--
+1. Os players precisarão identificar-se para dar continuidade no jogo;
+
+1.1 O player 1 escolherá qual posição irá jogar com qual das peças irá jogar;
+
+--Tabuleiro--
+2. O tabuleiro possuirá 10 linhas e 10 colunas;
+
+2.1 As peças do tabuleiro estarão posicionadas em formação pares e impares;
+
+2.2 As linhas 5 e 6 das colunas não iniciará com as peças;
+
+2.3 O jogo terá que funcionar na diagonal, o jogador não poderá colocar sua peça na mesma coluna, terá de escolher uma coluna diferente para que o jogo tenha um sentido diagonal;
+
+--jogo--
+3. O jogo terá um número de jogadas, as jogadas impares serão realizadas pelo player 1 e as jogadas pares pelo player 2;
+
+3.1 Ao escolher uma posição, se "passar por cima" de uma peça do adversário, ele irá ficar sem aquela peça na partida do jogo;
+
+3.2 Ambos os jogadores poderão somente mover sua peça para a próxima posição mais perto;  
+
+3.3 Caso uma das peças do player 1 chegar a ponta   da parte correspondente ao adversário, sua peça vira dama e poderá escolher a sua posição desejada e vice-versa; 
+
+3.4 O jogo acabará somente quando o adversário perder todas as suas peças e assim será declarado o vencedor; 
