@@ -67,13 +67,20 @@ public class jogo {
                 while (posicao[linha][coluna] == false) {
                     if (linha > 7 && coluna > 7 || posicao[linha][coluna] == true) {
                         System.out.println("Posição inválida ou em uso, tente novamente!");
-                    } else if (linha == 1 && coluna == 2 || linha == 0 && coluna == 1) {
+                        break;
+                    } else if (linha == 3 && coluna == 1) {
                         System.out.println("Posição inválida, tente novamente!");
+                        break;
                     } else {
                         tabuleiro[linha][coluna] = peca;
                         posicao[linha][coluna] = true;
                     }
                 }
+
+                if (linha == 3 && coluna == 0) {
+                    tabuleiro[2][1] = '_';
+                }
+
             } else if (jogadas % 2 == 0) {
                 System.out.println("teste!");
             }
