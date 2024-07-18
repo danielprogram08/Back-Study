@@ -1,7 +1,7 @@
 //Tipos de Saída;
-document.getElementById("teste").innerHTML = "Hello World!";
-console.log("Hello World!");
-alert("Hello World!");
+//document.getElementById("teste").innerHTML = "Hello World!";
+//console.log("Hello World!");
+//alert("Hello World!");
 
 //Tipos de Variáveis: Var, Let, Const(Constante);
 //OBS: "Const" não mudará seu valor, sempre se manterá constante; 
@@ -21,3 +21,8 @@ var a = 1, b = 2, c = 3;
 var soma;
 soma = (a + b + c);
 console.log(soma);
+
+//operador ternário;
+let pontos;
+let tipo = pontos > 100 ? "Comum" : "premium";
+console.log(pontos);

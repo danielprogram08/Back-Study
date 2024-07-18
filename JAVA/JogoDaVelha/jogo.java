@@ -70,7 +70,7 @@ public class jogo {
 
                 } while (true);
 
-            // player 2;
+                // player 2;
             } else if (jogada % 2 == 0) {
                 System.out.println();
                 do {
@@ -128,7 +128,7 @@ public class jogo {
                 ganhou = true;
                 System.out.println("Parabéns " + player1 + " você venceu este jogo!");
 
-            // horizontal;
+                // horizontal;
             } else if (tabuleiro[0][0] == sinal && tabuleiro[1][0] == sinal && tabuleiro[2][0] == sinal) {
                 ganhou = true;
                 System.out.println("Parabéns " + player1 + " você venceu este jogo!");
@@ -139,7 +139,7 @@ public class jogo {
                 ganhou = true;
                 System.out.println("Parabéns " + player1 + " você venceu este jogo!");
 
-            // diagonal;
+                // diagonal;
             } else if (tabuleiro[0][0] == sinal && tabuleiro[1][1] == sinal && tabuleiro[2][2] == sinal) {
                 ganhou = true;
                 System.out.println("Parabéns " + player1 + " você venceu este jogo!");
@@ -147,8 +147,8 @@ public class jogo {
                 ganhou = true;
                 System.out.println("Parabéns " + player1 + " você venceu este jogo!");
 
-            // player 2;
-            // vertical;
+                // player 2;
+                // vertical;
             } else if (tabuleiro[0][0] == sinal2 && tabuleiro[0][1] == sinal2 && tabuleiro[0][2] == sinal2) {
                 ganhou = true;
                 System.out.println("Parabéns " + player2 + " você venceu este jogo!");
@@ -159,7 +159,7 @@ public class jogo {
                 ganhou = true;
                 System.out.println("Parabéns " + player2 + " você venceu este jogo!");
 
-            // horizontal;
+                // horizontal;
             } else if (tabuleiro[0][0] == sinal2 && tabuleiro[1][0] == sinal2 && tabuleiro[2][0] == sinal2) {
                 ganhou = true;
                 System.out.println("Parabéns " + player2 + " você venceu este jogo!");
@@ -170,7 +170,7 @@ public class jogo {
                 ganhou = true;
                 System.out.println("Parabéns " + player2 + " você venceu este jogo!");
 
-            // diagonal;
+                // diagonal;
             } else if (tabuleiro[0][0] == sinal2 && tabuleiro[1][1] == sinal2 && tabuleiro[2][2] == sinal2) {
                 ganhou = true;
                 System.out.println("Parabéns " + player2 + " você venceu este jogo!");
@@ -178,7 +178,7 @@ public class jogo {
                 ganhou = true;
                 System.out.println("Parabéns " + player2 + " você venceu este jogo!");
 
-            //velha;
+                // velha;
             } else if (jogada == 10) {
                 System.out.println("Velha! Parabéns " + player1 + " e " + player2 + " pelo empate!");
             }

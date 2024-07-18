@@ -30,3 +30,7 @@ console.log(carro.modelo);
 //Chamando o Método;
 carro.buzina();
 carro.completo();
+
+//Arrays;
+let caminhao = ["Ford", "Mercedez"];
+
