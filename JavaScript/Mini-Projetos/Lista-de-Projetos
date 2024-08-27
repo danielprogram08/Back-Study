@@ -1,0 +1,16 @@
+-- Lista de Projetos --
+
+1. Máximo entre dois valores; (OK)
+2. FizzBuzz;
+3. Medidor de velocidade;
+4. Par ou Impar; (OK)
+5. Encontre o String;
+6. Multiplos de 3 e 5; (OK)
+7. Média de Nota Escolar;
+8. Contador de Asteríscos;
+9. Números Primos;
+
+(Explicando o projeto 2)
+----------------------------------------------------
+// O FizzBuzz contém 100 números o qual o número 
+múltiplo de 3 é trocado pela palavra fizz e o múltiplo de 5 é trocado pela palavra buzz.
