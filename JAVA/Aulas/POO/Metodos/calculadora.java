@@ -1,7 +1,7 @@
-package Aulas.POO.Métodos;
+package POO.Metodos;
 
 //método com parâmetro;
-public class Calculadora {
+public class calculadora {
     public static void main(String[] args) {
         int result = calcularDobro(10);
         System.out.println("O dobro do valor é: " + result);

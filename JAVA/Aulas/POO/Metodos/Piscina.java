@@ -1,4 +1,4 @@
-package Aulas.POO.Métodos;
+package POO.Metodos;
 
 import java.util.Scanner;
 

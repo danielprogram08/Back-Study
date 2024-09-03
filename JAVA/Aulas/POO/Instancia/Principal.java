@@ -1,4 +1,4 @@
-package Aulas.POO.Instância;
+package POO.Instancia;
 
 import java.util.Scanner;
 

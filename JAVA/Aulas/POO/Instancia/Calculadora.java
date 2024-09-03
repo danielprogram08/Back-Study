@@ -1,4 +1,4 @@
-package Aulas.POO.Instância;
+package POO.Instancia;
 
 public class Calculadora {
     Calculadora calcularDobro = new Calculadora ();    
