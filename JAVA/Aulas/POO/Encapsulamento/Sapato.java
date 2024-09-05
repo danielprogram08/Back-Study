@@ -1,3 +1,5 @@
+package POO.Encapsulamento;
+
 public class Sapato {
     private int tamanho;
 
