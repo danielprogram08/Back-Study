@@ -1,4 +1,4 @@
 # Arquivos de configuração
 
-./src/*
-./.vscode/*
+src/*
+.vscode/*
