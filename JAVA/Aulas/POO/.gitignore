@@ -1,4 +1,4 @@
 # Arquivos de configuração
 
-JAVA/Aulas/POO/.src
-JAVA/Aulas/POO/.vscode
+./src/*
+./.vscode/*
