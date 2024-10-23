@@ -1,11 +1,13 @@
 package GerenciamentoBiblioteca;
 
+import Biblioteca.livros;
+
 public class Livro {
     private String titulo;
     private String autor;
     private String editora;
-    private int anoPublicacao;
     private String ISBN;
+    private int anoPublicacao;
     private int quantidadeDisponivel;
     
     public Livro (String titulo, String autor, String editora, int anoPublicacao, String ISBN, int quantidadeDisponivel) {
@@ -31,7 +33,7 @@ public class Livro {
         this.autor = autor;
     }
 
-    public String editora () {
+    public String geteditora () {
         return editora;
     }
     public void seteditora (String editora) {
@@ -48,7 +50,7 @@ public class Livro {
     public String getISBN () {
         return ISBN;
     }
-    public void setISBN () {
+    public void setISBN (String ISBN) {
         this.ISBN = ISBN;
     }
 
@@ -58,8 +60,25 @@ public class Livro {
     public void setQuantidadeDisponivel (int quantidadeDisponivel) {
         this.quantidadeDisponivel = quantidadeDisponivel;
     }
-
-    public void emprestarLivro () {
-        
-    }
 }
+
+
+/*
+ * import java.util.ArrayList;
+import java.util.List;
+
+class Biblioteca {
+    private List<Livro> acervo;
+
+    // Construtor
+    public Biblioteca() {
+        this.acervo = new ArrayList<>();
+    }
+
+    // Métodos para operações de livros (adicionar, buscar, atualizar, excluir)
+    // ...
+
+    // Métodos para empréstimo e devolução
+    // ...
+
+ */
