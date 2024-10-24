@@ -1,8 +1,11 @@
 package GerenciamentoBiblioteca;
 
 import java.util.Scanner;
-
 import Biblioteca.biblioteca;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 
 public class Menu {
     Scanner in = new Scanner(System.in);
@@ -18,7 +21,14 @@ public class Menu {
             System.out.println();
             System.out.println("====BEM-VINDO AO MENU BIBLIOTECÁRIO!=====");
             System.out.println();
-            System.out.print("Selecione uma opção para prosseguir." + "\n" +"\n" + "1. Cadastrar Livro" + "\n" + "2. Consultar Livros" + "\n" + "3. Atualizar Livro" + "\n" + "4. Excluir" + "\n" + "5. Sair " + "\n" + "\n");
+            System.out.print("Selecione uma opção para prosseguir.\n" + 
+            "\n1. Cadastrar Livro\n" + 
+            "\n2. Consultar Livros\n" + 
+            "\n3. Atualizar Livro\n" + 
+            "\n4. Excluir\n" + 
+            "\n5. Emprestimo de Livros:\n" + 
+            "\n6. Devolução de Livros:\n" + 
+            "\n7. Sair:\n" + "\n");
                 opcao = in.nextInt();
 
             switch (opcao) {
@@ -26,8 +36,7 @@ public class Menu {
                 
                 do {
                     biblioteca.adicionarLivro();
-                    System.out.println();
-                    System.out.print("Deseja cadastrar mais livros ? ");
+                    System.out.println("\nDeseja cadastrar mais livros ? [s/n]");
                     opcaoCase = in.next().charAt(0);
                 } while (opcaoCase == 's');
                 break;
@@ -41,19 +50,26 @@ public class Menu {
                 break;
 
                 case 4:
-
+                    biblioteca.excluirLivro();
                 break;
 
                 case 5:
-                System.out.println();
-                System.out.println("Até a Próxima! :D");
+                    biblioteca.emprestarLivro();
+                break;
+
+                case 6:
+                    biblioteca.devolverLivro();
+                break;
+
+                case 7:
+                System.out.println("\nAté a Próxima! :D");
                 menu = false;
                 break;
 
                 default:
                 System.out.println("Opção inválida! Tente novamente");
                 continue;
-        }
+            }
 
         }
     }

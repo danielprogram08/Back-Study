@@ -60,8 +60,8 @@ public class Livro {
     public void setQuantidadeDisponivel (int quantidadeDisponivel) {
         this.quantidadeDisponivel = quantidadeDisponivel;
     }
-}
 
+}
 
 /*
  * import java.util.ArrayList;
