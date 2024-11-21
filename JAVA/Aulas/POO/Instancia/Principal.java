@@ -1,5 +1,3 @@
-package POO.Instancia;
-
 import java.util.Scanner;
 
 public class Principal {

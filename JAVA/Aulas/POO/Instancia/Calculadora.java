@@ -1,5 +1,3 @@
-package POO.Instancia;
-
 public class Calculadora {
     Calculadora calcularDobro = new Calculadora ();    
     

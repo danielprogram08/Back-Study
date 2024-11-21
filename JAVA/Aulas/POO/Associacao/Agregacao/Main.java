@@ -1,5 +1,3 @@
-package POO.Associacao.Composicao.Agregacao;
-
 import java.util.Scanner;
 
 public class Main {

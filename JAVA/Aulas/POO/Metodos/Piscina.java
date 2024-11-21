@@ -1,5 +1,3 @@
-package POO.Metodos;
-
 import java.util.Scanner;
 
 public class Piscina {

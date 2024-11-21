@@ -1,5 +1,3 @@
-package POO.Associacao.Composicao.Agregacao;
-
 public class Turma {
     private Aluno aluno;
     private String turma, info;

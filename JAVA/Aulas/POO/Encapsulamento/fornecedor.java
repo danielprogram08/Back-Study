@@ -1,5 +1,3 @@
-package POO.Encapsulamento;
-
 public class fornecedor {
     private int salario;
 

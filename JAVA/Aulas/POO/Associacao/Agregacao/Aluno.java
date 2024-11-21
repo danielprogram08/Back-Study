@@ -1,5 +1,3 @@
-package POO.Associacao.Composicao.Agregacao;
-
 public class Aluno {
     private String nome;
     private String matricula;

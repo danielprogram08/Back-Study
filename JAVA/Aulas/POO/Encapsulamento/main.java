@@ -1,5 +1,3 @@
-package POO.Encapsulamento;
-
 public class main {
     public static void main(String[] args) {
         fornecedor Fornecedor = new fornecedor(2500);
