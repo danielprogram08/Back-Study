@@ -14,4 +14,3 @@ rl.question(`Insira um valor (Número ou Nome): `, (value) => {
         console.log("Esta variável não é do tipo String!")
     }
 });
-
