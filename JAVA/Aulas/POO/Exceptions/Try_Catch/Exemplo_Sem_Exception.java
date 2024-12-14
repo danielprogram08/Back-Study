@@ -1,6 +1,6 @@
 package Exceptions.Try_Catch;
 
-public class Exemple_Sem_Exception {
+public class Exemplo_Sem_Exception {
     public static void main(String[] args) {
 
         int[] vetor = new int[4];
