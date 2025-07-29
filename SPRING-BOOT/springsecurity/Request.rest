@@ -1,0 +1,7 @@
+POST http://localhost:8080/Supplier/Register
+Content-Type: application/json`
+
+{
+    "name": "Daniel Silva",
+    "price": "10,00"
+}
