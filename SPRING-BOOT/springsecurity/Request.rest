@@ -2,6 +2,8 @@ POST http://localhost:8080/Supplier/Register
 Content-Type: application/json`
 
 {
-    "name": "Daniel Silva",
-    "price": "10,00"
+    "name": "Carro de Mão",
+    "price": "135,50"
 }
+
+GET http://localhost:8080/Products/SearchAll
