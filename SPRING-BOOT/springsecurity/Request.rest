@@ -7,3 +7,23 @@ Content-Type: application/json`
 }
 
 GET http://localhost:8080/Products/SearchAll
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6ImRhbmllbF9kZXYiLCJleHAiOjE3NTM5ODE4MDN9.7-sk6EidWdk1Ib-x2Gn0UyC7KoHqNc28Q7rdAUCaE3Q
+Content-Type: application/json 
+
+
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+    "login": "daniel_dev",
+    "password": "345678",
+    "role": "ADMIN"
+}
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+    "login": "daniel_dev",
+    "password": "345678"
+}
