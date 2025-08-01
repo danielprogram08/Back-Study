@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  spring-exceptions-db:
+    image: mysql:8.0
+    container_name: 'spring-exceptions-db'
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    volumes:
+      - ./db/migration:/docker-entrypoint-initdb.d/init.sql
