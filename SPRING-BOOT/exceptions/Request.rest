@@ -1,0 +1,13 @@
+GET http://localhost:8080/Events
+
+POST http://localhost:8080/Events/Register
+Content-Type: application/json
+
+{
+    "title": "Evento Rejuntamix",
+    "description": "Este é um evento RejuntaMix para todos os amigos clientes.",
+    "address": "Av. Marciel Bezerra 2090 A",
+    "city": "Fortaleza",
+    "state": "CE",
+    "remote": false
+}
