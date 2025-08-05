@@ -22,12 +22,8 @@ public class EventsController {
     private EventsService service;
 
     @PostMapping("/Register")
-    public ResponseEntity<EventsDTO> RegisterEvent(@RequestBody Events event) {
-        return service.RegisterEvent(event);
-    }
+    public ResponseEntity<EventsDTO> RegisterEvent(@RequestBody Events event) { return service.RegisterEvent(event); }
 
     @GetMapping
-    public ResponseEntity<List<Events>> ListAllEvents() {
-        return service.ListAllEvents();
-    }
+    public ResponseEntity<List<Events>> ListAllEvents() { return service.ListAllEvents(); }
 }
