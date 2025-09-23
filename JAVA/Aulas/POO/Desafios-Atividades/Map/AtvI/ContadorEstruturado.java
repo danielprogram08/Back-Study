@@ -1,3 +1,5 @@
+package Map.AtvI;
+
 public class ContadorEstruturado {
     public static void main(String[] args) {
         imprimirPares(10);
