@@ -7,8 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import com.exceptions.exceptions.Domain.Events;
 import com.exceptions.exceptions.Domain.EventsDTO;
+import com.exceptions.exceptions.Exception.EventsNotFoundException;
 import com.exceptions.exceptions.Repository.EventsRepository;
 
 @Service
@@ -29,13 +31,9 @@ public class EventsService {
     }
 
     @Transactional(readOnly = true)
-    public ResponseEntity<List<Events>> ListAllEvents() {
-        try {
-            List<Events> events = repository.findAll();
-            if (!events.isEmpty()) { return ResponseEntity.ok(events); }
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(events);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-        }
+    public List<Events> ListAllEvents() {
+        List<Events> events = repository.findAll();
+        if (!events.isEmpty()) { return events; }
+        throw new EventsNotFoundException("Nenhum evento encontrado.");
     }
 }
