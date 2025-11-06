@@ -1,0 +1,13 @@
+package com.microsservicea.microsservicea;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MicrosserviceaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MicrosserviceaApplication.class, args);
+	}
+
+}
