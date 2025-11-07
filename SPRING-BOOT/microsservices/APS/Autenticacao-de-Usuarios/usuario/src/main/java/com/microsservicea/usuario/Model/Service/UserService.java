@@ -1,8 +1,7 @@
 // Criador;
-
 package com.microsservicea.usuario.Model.Service;
 
-// import java.util.Optional;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +30,35 @@ public class UserService {
         return dto;
     }
 
-    /*  Cadastrar Usuário via Gmail;
+    // Logar Usuário;
+    @Transactional(readOnly = true)
+    public Optional<UserDTO> loginUser(User data) {
+        if (!repository.existsByEmail(data.getEmail())) {
+            throw new BadRequestExceptionError("Usuário não encontrado!");
+        }
+
+        UserDTO dto = new UserDTO(data.getName(), data.getEmail(), data.getPassword());
+        dto.convert();
+        repository.findByEmailAndPassword(dto.email(), dto.password());
+        return Optional.of(dto);
+    }
+
+    // Atualizar Usuário;
     @Transactional
-    public UserDTO registerWithGmail(User data) {} */
+    public UserDTO updateUser(Long id, User data) {
+        if (!repository.existsById(id)) {
+            throw new BadRequestExceptionError("Usuário não encontrado!");
+        }
+
+        UserDTO dto = new UserDTO(data.getName(), data.getEmail(), data.getPassword());
+        dto.convert();
+        repository.updateUser(data.getId(), dto.email(), dto.password());
+        return dto;
+    }
+
+    // Encerrar Conta;
+    @Transactional
+    public void deleteUser(Long id) {
+        repository.deleteById(id);
+    }
 }
