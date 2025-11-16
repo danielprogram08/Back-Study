@@ -1,0 +1,2 @@
+// Listar Emails;
+GET http://localhost:8081/email/find

@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.microsservicea.usuario.Handler.Exceptions.BadRequestExceptionError;
+import com.microsservicea.usuario.Model.Client.UserClient;
 import com.microsservicea.usuario.Model.Entity.User;
+import com.microsservicea.usuario.Model.Entity.UserClientDTO;
 import com.microsservicea.usuario.Model.Entity.UserDTO;
 import com.microsservicea.usuario.Model.Repository.UserRepository;
 
@@ -18,13 +20,17 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
+    @Autowired
+    private UserClient userClient;
+
     // Cadastrar Usuário;
     @Transactional
     public UserDTO registerUser(User data) {
         if (repository.existsByEmail(data.getEmail())) { 
             throw new BadRequestExceptionError("Usuário já cadastrado!"); 
         }
-
+        UserClientDTO clientDTO = new UserClientDTO(data.getName(), data.getEmail());
+        userClient.sendUserByEmail(clientDTO);
         UserDTO dto = new UserDTO(data.getName(), data.getEmail(), data.getPassword());
         repository.save(dto.convert());
         return dto;

@@ -17,7 +17,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     @Modifying
     @Query
-    (value = "UPDATE FROM usuarios SET email = (:email), password = (:password) WHERE id = (:id)", nativeQuery = true)
+    (value = "UPDATE usuarios SET email = :email, password = :password WHERE id = :id", nativeQuery = true)
     void updateUser(Long id, String email, String password);
     
 }

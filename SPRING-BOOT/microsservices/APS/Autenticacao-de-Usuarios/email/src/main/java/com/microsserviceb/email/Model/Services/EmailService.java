@@ -1,7 +1,10 @@
 package com.microsserviceb.email.Model.Services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.microsserviceb.email.Handler.BadRequestExceptionError;
 import com.microsserviceb.email.Model.Entity.Email;
@@ -23,5 +26,11 @@ public class EmailService {
         EmailDTO dto = new EmailDTO(data.getName(), data.getEmail());
         repository.save(dto.convert());
         return dto;
+    }
+
+    // Listar Emails;
+    @Transactional(readOnly = true)
+    public List<Email> listAllEmails() {
+        return repository.findAll();
     }
 }

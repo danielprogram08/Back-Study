@@ -23,24 +23,28 @@ public class UserController {
     @Autowired
     private UserService service;
     
+    // Cadastrar Usuário;
     @PostMapping("/register")
     public ResponseEntity registerUser(@RequestBody User data) {
         service.registerUser(data);
         return ResponseEntity.status(HttpStatus.CREATED).body("Usuário cadastrado com sucesso!");
     }
 
+    // Logar Usuário;
     @PostMapping("/login")
     public ResponseEntity loginUser(@RequestBody User data) {
         service.loginUser(data);
         return ResponseEntity.status(HttpStatus.OK).body("Usuário logado com sucesso!");
     }
 
+    // Atualizar dados do Usuário;
     @PutMapping("/update")
     public ResponseEntity updateUser(@RequestParam Long id, @RequestBody User data) {
         service.updateUser(id, data);
         return ResponseEntity.status(HttpStatus.OK).body("Usuário atualizado com sucesso!");
     }
 
+    // Encerrar Conta;
     @DeleteMapping("/delete")
     public ResponseEntity deleteUser(@RequestParam Long id) {
         service.deleteUser(id);
