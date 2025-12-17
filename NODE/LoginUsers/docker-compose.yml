@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  db-users:
+    image: mysql:8.0
+    container_name: db-users
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ./CREATE-TABLE-USERS.sql:/docker-entrypoint-initdb.d/CREATE-TABLE-USERS.sql
