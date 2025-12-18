@@ -11,6 +11,17 @@
         "javafx-sdk-25.0.1/lib/javafx-swt.jar",
         "javafx-sdk-25.0.1/lib/jdk.jsobject.jar",
         "javafx-sdk-25.0.1/lib/jfx.incubator.input.jar",
-        "javafx-sdk-25.0.1/lib/jfx.incubator.richtext.jar"
+        "javafx-sdk-25.0.1/lib/jfx.incubator.richtext.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/javafx.base.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/javafx.controls.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/javafx.fxml.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/javafx.graphics.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/javafx.media.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/javafx.swing.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/javafx.web.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/javafx-swt.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/jdk.jsobject.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/jfx.incubator.input.jar",
+        "JavaDesktop/javafx-sdk-25.0.1/lib/jfx.incubator.richtext.jar"
     ]
 }
