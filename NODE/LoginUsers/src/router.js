@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const tasksController = require('./Models/Controller/UserController.js')
+const tasksController = require('./Controller/UserController.js')
 
 // teste de requisição;
 router.get('/test', (req, res) => {
@@ -8,6 +8,6 @@ router.get('/test', (req, res) => {
 });
 
 // Retornando todos os usuários;
-router.get('/users', tasksController.getAll)
+router.get('/users', tasksController.getAll);
 
 module.exports = router;

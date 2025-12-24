@@ -1,8 +1,15 @@
 const connection = require('../connection.js');
 
-const getAll = async () => {
+const getAllUsers = async () => {
     const users = await connection.execute('SELECT * FROM Users');
     return users;
 };
 
-module.exports = { getAll };
+const createUser = async (task) => {
+    const { name, email, password } = task;
+    const query = 'INSERT INTO Users (name, email, password) VALUES (?, ?, ?)'
+    const createdUser = await connection.execute(query, [name, email, password]);
+    return createdUser;
+};
+
+module.exports = { getAllUsers, createUser };
