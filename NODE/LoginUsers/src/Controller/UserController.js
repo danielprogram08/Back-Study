@@ -10,6 +10,11 @@ const createdUser = async (req, res) => {
     return res.status(201).json(createduser);
 };
 
+const updateUser = async (req, res) => {
+    const updateuser = await usersRepository.updateUser(req.params.id, req.body);
+    return res.status(200).json(updateuser);
+}
+
 module.exports = {
     getAll, createdUser
 };
